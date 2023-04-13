@@ -105,7 +105,7 @@ app.get("/api/users/:_id/logs", async (req, res) => {
     filter.date = dateObj;
   }
   
-  const exercises = await Exercise.find(filter).limit(+limit ?? 500)
+  const exercises = await Exercise.find(filter).limit(+limit ?? 600)
 
   const log = exercises.map(x => ({
     description: x.description,
